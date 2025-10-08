@@ -1,4 +1,4 @@
-# 📊 Simulador de Investimentos — ETFs e Fundos
+# 📊 Simulador de Investimentos Ambicioso — ETFs e Fundos
 
 **Número da Lista**: 36
 **Conteúdo da Disciplina**: FGA0124 - PROJETO DE ALGORITMOS - T01
@@ -42,11 +42,8 @@ Desenvolver uma aplicação interativa para analisar e visualizar dados de inves
 * **Linguagem:** Python 3
 * **Bibliotecas:**
   * `pandas` → leitura e manipulação de dados CSV
-  * `numpy` → cálculos estatísticos e numéricos
   * `streamlit` → criação da interface web interativa
   * `matplotlib` → visualização de dados com gráficos simples
-  * `plotly` → gráficos interativos e exploratórios
-
 
 ## 🧩 Estrutura do Projeto
 
@@ -116,7 +113,7 @@ O Streamlit abrirá automaticamente (geralmente em [http://localhost:8501](http:
 
 ## 💡 Observações
 
-* O dataset utilizado foi extraído da plataforma [Kaggle](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv), contendo informações históricas sobre ETFs e Fundos Mútuos dos EUA.
+* O dataset utilizado foi extraído da plataforma Kaggle (neste [link](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv)), contendo informações históricas sobre ETFs e Fundos Mútuos dos EUA.
 
 * Projeto desenvolvido para a disciplina **Projeto de Algoritmos (FGA0124)** da **Universidade de Brasília — FCTE**.
 
