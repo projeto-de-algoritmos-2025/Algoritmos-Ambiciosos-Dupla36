@@ -43,22 +43,22 @@ Desenvolver uma aplicação interativa para analisar e visualizar dados de inves
 * **Bibliotecas:**
   * `pandas` → leitura e manipulação de dados CSV
   * `streamlit` → criação da interface web interativa
-  * `matplotlib` → visualização de dados com gráficos simples
 
 ## 🧩 Estrutura do Projeto
 
 ```
-📁 simulador-investimentos
+📁 Algoritmos-Ambiciosos-Dupla36
  ┣ 📂 data
- ┃ ┗ etf_funds_data.csv
+ ┃ ┗ ETFs.csv
  ┣ 📂 src
- ┃ ┗ app.py
+ ┃ ┗ main.py
+ ┣ 📜 LICENSE
  ┣ 📜 requirements.txt
  ┣ 📜 README.md
 ```
 
 * `data/` → contém o dataset com as informações dos fundos e ETFs.
-* `src/app.py` → script principal do Streamlit que faz a leitura e visualização dos dados.
+* `src/main.py` → script principal do Streamlit que faz a leitura e visualização dos dados.
 * `requirements.txt` → dependências necessárias para executar o projeto.
 
 ## 🧠 Funcionalidades
@@ -85,13 +85,13 @@ Desenvolver uma aplicação interativa para analisar e visualizar dados de inves
 1. **Clonar o repositório**
 
 ```bash
-git clone https://github.com/projeto-de-algoritmos-2025/Dados-2-Investimentos-D3
+git clone https://github.com/projeto-de-algoritmos-2025/Algoritmos-Ambiciosos-Dupla36.git
 ```
 
 2. **Entrar na pasta do projeto**
 
 ```bash
-cd simulador-investimentos/src
+cd Algoritmos-Ambiciosos-Dupla36
 ```
 
 3. **Instalar dependências**
@@ -103,7 +103,8 @@ pip install -r requirements.txt
 4. **Executar o programa**
 
 ```bash
-streamlit run app.py
+cd src
+streamlit run main.py
 ```
 
 5. **Abrir no navegador**
