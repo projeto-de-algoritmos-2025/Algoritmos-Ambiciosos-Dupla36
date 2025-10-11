@@ -30,12 +30,58 @@ Autores: [Danielle Soares](https://github.com/danielle-soaress) e [Leticia Arisa
 
 ## 🎯 Objetivo
 
-Desenvolver uma aplicação interativa para analisar e visualizar dados de investimentos (ETFs e Fundos Mútuos), permitindo:
+Desenvolver uma aplicação interativa que analisa e simula estratégias de alocação de investimentos em ETFs, utilizando algoritmos ambiciosos (guloso).
 
-* Exibição de indicadores de desempenho, como *retorno anual*, *Sharpe ratio*, *beta*, etc.;
-* Visualização interativa de métricas de fundos por categoria, tipo de ativo ou rentabilidade;
-* Auxílio na tomada de decisão de investimentos através de gráficos e filtros dinâmicos.
+O sistema permite montar carteiras automaticamente a partir de dados reais de desempenho de ETFs, considerando diferentes restrições de otimização, como capital disponível ou limite de risco.
 
+O projeto visa ilustrar a aplicação prática de algoritmos ambiciosos em problemas reais de otimização financeira.
+
+
+## 🧠 Funcionalidades
+
+A aplicação apresenta duas abas, cada uma implementando uma variação do problema do Knapsack Fracionário:
+
+### 💼 1. Seleção de Carteira por Capital Disponível
+
+> (Inspirado no Fractional Knapsack clássico)
+
+Nesta aba, o algoritmo seleciona automaticamente os ETFs que maximizam o retorno esperado, respeitando o capital total disponível informado pelo investidor.
+
+* O “peso” de cada ETF é o preço unitário (adj_close);
+* O “valor” é o retorno médio anual dos últimos 3 anos;
+* A eficiência é calculada como a razão entre retorno e risco (ou o produto entre eles, dependendo da prioridade do usuário).
+* O investidor pode escolher se deseja priorizar menor risco ou maior retorno.
+
+**Saídas exibidas na tela:**
+
+* Tabela com os ETFs selecionados, preço, retorno, risco e fração alocada;
+* Cálculo do capital total investido e retorno estimado da carteira;
+* Gráfico de barras mostrando a contribuição de retorno por ativo.
+
+### ⚖️ 2. Seleção de Carteira com Limite de Risco
+
+> Inspirado no Knapsack com restrição de capacidade
+
+Nesta aba, o algoritmo seleciona os ETFs que maximizam o retorno total, respeitando um limite máximo de risco total definido pelo investidor.
+
+* O “peso” é o risco (desvio-padrão em 3 anos);
+* O “valor” é o retorno médio anual;
+* Os ETFs são escolhidos na ordem de maior eficiência (retorno/risco) até que o risco total atinja o limite.
+
+**Saídas exibidas na tela:**
+
+* Tabela com os ETFs escolhidos e a fração de alocação;
+* Exibição do risco total da carteira e retorno estimado;
+* Gráfico de barras mostrando a contribuição percentual de cada ativo.
+
+## 🧮 Algoritmos Ambiciosos aplicados
+
+Ambas as estratégias implementam versões do algoritmo ambicioso (guloso), baseadas no problema do Knapsack:
+
+| Versão                 | Restrição               | Característica Principal                                                  |
+| ---------------------- | ----------------------  | ------------------------------------------------------------------------- |
+| **Capital Disponível** | Capital máximo (em R$)      | Escolhe ativos com melhor retorno relativo até esgotar o capital          |
+| **Limite de Risco**    | Risco máximo (%)            | Escolhe ativos com melhor eficiência (retorno/risco) até atingir o limite |
 
 ## 🔧 Tecnologias e Bibliotecas Utilizadas
 
@@ -60,25 +106,6 @@ Desenvolver uma aplicação interativa para analisar e visualizar dados de inves
 * `data/` → contém o dataset com as informações dos fundos e ETFs.
 * `src/main.py` → script principal do Streamlit que faz a leitura e visualização dos dados.
 * `requirements.txt` → dependências necessárias para executar o projeto.
-
-## 🧠 Funcionalidades
-
-1. **Visualização de Indicadores**
-
-   * Exibe métricas financeiras como retorno, volatilidade, Sharpe Ratio, e total de ativos sob gestão.
-
-2. **Filtros Dinâmicos**
-
-   * Permite selecionar regiões, categorias e famílias de fundos.
-
-3. **Gráficos Interativos**
-
-   * Mostra comparações de performance ao longo do tempo com `Plotly`.
-
-4. **Análise Exploratória**
-
-   * Calcula médias e correlações entre indicadores financeiros.
-
 
 ## 🚀 Como Executar
 
