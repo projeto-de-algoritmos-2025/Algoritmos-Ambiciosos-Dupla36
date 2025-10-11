@@ -103,11 +103,18 @@ Ambas as estratégias implementam versões do algoritmo ambicioso (guloso), base
  ┣ 📜 README.md
 ```
 
-* `data/` → contém o dataset com as informações dos fundos e ETFs.
+* `data/` → contém um dos datasets necessários (ETFs.csv) com as informações dos fundos e ETFs.
+
+   ⚠️ O dataset ETF_prices.csv não está incluído no repositório devido ao tamanho. Baixe-o manualmente em: https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
+
 * `src/main.py` → script principal do Streamlit que faz a leitura e visualização dos dados.
 * `requirements.txt` → dependências necessárias para executar o projeto.
 
 ## 🚀 Como Executar
+
+⚠️ **Observação importante:**  
+
+O arquivo `data/ETF_prices.csv` (≈188 MB) não está incluído neste repositório devido ao limite de tamanho do GitHub. Você pode baixá-lo manualmente no [Kaggle](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv) e colocá-lo dentro da pasta `data/` antes de executar o projeto.
 
 1. **Clonar o repositório**
 
@@ -144,4 +151,5 @@ O Streamlit abrirá automaticamente (geralmente em [http://localhost:8501](http:
 * O dataset utilizado foi extraído da plataforma Kaggle (neste [link](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv)), contendo informações históricas sobre ETFs e Fundos Mútuos dos EUA.
 
 * Projeto desenvolvido para a disciplina **Projeto de Algoritmos (FGA0124)** da **Universidade de Brasília — FCTE**.
+
 
