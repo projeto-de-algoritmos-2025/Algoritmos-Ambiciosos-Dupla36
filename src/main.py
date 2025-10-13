@@ -12,7 +12,7 @@ tab1, tab2 = st.tabs([
 
 # == carregar os datasets
 DATA_PATH_ETFS = "../data/ETFs.csv"
-DATA_PATH_ETFS_PRICE = "../data/ETF_prices.csv" 
+DATA_PATH_ETFS_PRICE = "../data/ETF prices.csv" 
 
 @st.cache_data
 def load_data(funds_path, prices_path):
@@ -90,7 +90,7 @@ with tab1:
             # compra inteira
             row_copy['alocacao'] = preco_unitario
             capital_usado += preco_unitario
-            retorno_total += row['fund_mean_annual_return_3years'] * preco_unitario
+            retorno_total += (row['fund_mean_annual_return_3years'] / 100) * preco_unitario
             carteira.append(row_copy)
         else:
             # compra fracionária
@@ -99,9 +99,10 @@ with tab1:
                 row_copy['alocacao'] = fracao_disponivel
                 row_copy['fund_short_name'] += f" ({fracao_disponivel:.2f} R$)"
                 capital_usado += fracao_disponivel
-                retorno_total += row['fund_mean_annual_return_3years'] * fracao_disponivel
+                retorno_total += (row['fund_mean_annual_return_3years'] / 100) * fracao_disponivel
                 carteira.append(row_copy)
             break
+
 
     st.subheader("📊 Carteira Selecionada")
 
