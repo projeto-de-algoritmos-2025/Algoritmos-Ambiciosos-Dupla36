@@ -23,10 +23,11 @@
 ## 🎬 Apresentação do Projeto
 
 <div align="center">
-<a href=""><img src="" width="50%"></a>
+<a href="https://www.youtube.com/watch?v=Xu0tnW1isA0"><img src="thumb.png" width="50%"></a>
 </div>
 
 Autores: [Danielle Soares](https://github.com/danielle-soaress) e [Leticia Arisa](https://github.com/Leticia-Arisa-K-Higa).
+
 
 ## 🎯 Objetivo
 
@@ -105,7 +106,7 @@ Ambas as estratégias implementam versões do algoritmo ambicioso (guloso), base
 
 * `data/` → contém um dos datasets necessários (ETFs.csv) com as informações dos fundos e ETFs.
 
-   ⚠️ O dataset ETF_prices.csv não está incluído no repositório devido ao tamanho. Baixe-o manualmente em: https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
+   ⚠️ O dataset ETF prices.csv não está incluído no repositório devido ao tamanho. Baixe-o manualmente em: https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
 
 * `src/main.py` → script principal do Streamlit que faz a leitura e visualização dos dados.
 * `requirements.txt` → dependências necessárias para executar o projeto.
@@ -114,7 +115,7 @@ Ambas as estratégias implementam versões do algoritmo ambicioso (guloso), base
 
 ⚠️ **Observação importante:**  
 
-O arquivo `data/ETF_prices.csv` (≈188 MB) não está incluído neste repositório devido ao limite de tamanho do GitHub. Você pode baixá-lo manualmente no [Kaggle](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv) e colocá-lo dentro da pasta `data/` antes de executar o projeto.
+O arquivo `data/ETF prices.csv` (≈188 MB) não está incluído neste repositório devido ao limite de tamanho do GitHub. Você pode baixá-lo manualmente no [Kaggle](https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs?select=ETF+prices.csv) e colocá-lo dentro da pasta `data/` antes de executar o projeto.
 
 1. **Clonar o repositório**
 
